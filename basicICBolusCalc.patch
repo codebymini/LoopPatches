@@ -1,7 +1,7 @@
-diff --git a/Loop/View Models/BolusEntryViewModel.swift b/Loop/View Models/BolusEntryViewModel.swift
+diff --git a/Loop/Loop/View Models/BolusEntryViewModel.swift b/Loop/Loop/View Models/BolusEntryViewModel.swift
 index a86f20e0..335f1169 100644
---- a/Loop/View Models/BolusEntryViewModel.swift	
-+++ b/Loop/View Models/BolusEntryViewModel.swift	
+--- a/Loop/Loop/View Models/BolusEntryViewModel.swift	
++++ b/Loop/Loop/View Models/BolusEntryViewModel.swift	
 @@ -788,6 +788,56 @@ final class BolusEntryViewModel: ObservableObject {
  
          chartDateInterval = DateInterval(start: chartStartDate, duration: .hours(totalHours))
@@ -59,10 +59,10 @@ index a86f20e0..335f1169 100644
  
      func formatBolusAmount(_ bolusAmount: Double) -> String {
          bolusAmountFormatter.string(from: bolusAmount) ?? String(bolusAmount)
-diff --git a/Loop/Views/BolusEntryView.swift b/Loop/Views/BolusEntryView.swift
+diff --git a/Loop/Loop/Views/BolusEntryView.swift b/Loop/Loop/Views/BolusEntryView.swift
 index 4dd0c11a..ffed8fb5 100644
---- a/Loop/Views/BolusEntryView.swift
-+++ b/Loop/Views/BolusEntryView.swift
+--- a/Loop/Loop/Views/BolusEntryView.swift
++++ b/Loop/Loop/Views/BolusEntryView.swift
 @@ -156,6 +156,42 @@ struct BolusEntryView: View {
              maxFractionDigits: 2
          )

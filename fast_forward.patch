@@ -1,7 +1,7 @@
-diff --git a/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift b/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift
+diff --git a/OmniBLE/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift b/OmniBLE/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift
 index 3fca469..cd11d8c 100644
---- a/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift
-+++ b/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift
+--- a/OmniBLE/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift
++++ b/OmniBLE/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift
 @@ -40,11 +40,11 @@ enum DashUIScreen {
          case .insulinTypeSelection:
              return .pairAndPrime
