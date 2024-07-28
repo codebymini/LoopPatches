@@ -1,0 +1,31 @@
+diff --git a/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift b/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift
+index 3fca469..cd11d8c 100644
+--- a/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift
++++ b/OmniBLE/PumpManagerUI/ViewControllers/DashUICoordinator.swift
+@@ -40,11 +40,11 @@ enum DashUIScreen {
+         case .insulinTypeSelection:
+             return .pairAndPrime
+         case .pairAndPrime:
+-            return .confirmAttachment
++            return .insertCannula
+         case .confirmAttachment:
+             return .insertCannula
+         case .insertCannula:
+-            return .checkInsertedCannula
++            return nil
+         case .checkInsertedCannula:
+             return .setupComplete
+         case .setupComplete:
+@@ -350,11 +350,7 @@ class DashUICoordinator: UINavigationController, PumpManagerOnboarding, Completi
+         if pumpManager.state.podState?.needsCommsRecovery == true {
+             return .pendingCommandRecovery
+         } else if pumpManager.podCommState == .activating {
+-            if pumpManager.podAttachmentConfirmed {
+-                return .insertCannula
+-            } else {
+-                return .pairAndPrime // need to finish the priming
+-            }
++            return .insertCannula
+         } else if !pumpManager.isOnboarded {
+             if !pumpManager.initialConfigurationCompleted {
+                 return .firstRunScreen
